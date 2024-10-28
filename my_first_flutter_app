@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            "Wpr htti wpr htti",
+            style: TextStyle(
+                color: Colors.white, fontSize: 25, fontWeight: FontWeight.w400),
+          ),
+          backgroundColor: Color.fromARGB(255, 46, 195, 145),
+          leading: const Icon(
+            Icons.menu,
+            size: 30,
+            color: Colors.white,
+          ),
+          actions: const [
+            Icon(
+              Icons.search,
+              size: 30,
+            ),
+            Icon(Icons.alarm)
+          ],
+        ),
+        body: Center(
+          child: Text(
+            "Hello mother fucker!",
+            style: TextStyle(fontSize: 30),
+          ),
+        ),
+      ),
+    );
+  }
+}
