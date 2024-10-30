@@ -13,21 +13,27 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: SafeArea(
           child: Scaffold(
-            body: Column(
-              children: [
-                Text(
-                  "Flutter is esay",
-                  style: TextStyle(fontSize: 20),
-                ),
-                Text(
-                  "dart is esay",
-                  style: TextStyle(fontSize: 40),
-                ),
-                Icon(
-                  Icons.restaurant,
-                  size: 40,
-                )
-              ],
+            body: Container(
+              width: 300,
+              height: 300,
+              color: Colors.yellow,
+              child: const Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Flutter is esay",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Text(
+                    "dart is esay",
+                    style: TextStyle(fontSize: 40),
+                  ),
+                  Icon(
+                    Icons.restaurant,
+                    size: 40,
+                  )
+                ],
+              ),
             ),
           ),
         ));
