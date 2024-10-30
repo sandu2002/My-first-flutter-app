@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: SafeArea(
+          child: Scaffold(
+            body: Container(
+              width: 400,
+              height: 400,
+              color: Colors.yellow,
+              //padding: EdgeInsets.all(20),
+              //margin: EdgeInsets.all(30),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "Flutter is esay",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Text(
+                    "dart is esay",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Icon(
+                    Icons.restaurant,
+                    size: 40,
+                  )
+                ],
+              ),
+            ),
+          ),
+        ));
+  }
+}
