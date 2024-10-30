@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
               color: Colors.yellow,
               child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     "Flutter is esay",
