@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Flutter Container",
+      home: SafeArea(
+          child: Scaffold(
+        body: Container(
+          width: 200,
+          height: 200,
+          margin: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.red,
+              border: Border.all(
+                color: Colors.black,
+                width: 4,
+              )),
+
+          //padding: const EdgeInsets.all(30),
+
+          child: Center(child: const Text("Flutter")),
+        ),
+      )),
+    );
+  }
+}
