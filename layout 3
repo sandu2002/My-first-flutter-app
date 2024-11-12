@@ -1,0 +1,172 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  final double borderRadius = 10;
+  final double circleWidthAndHeight = 70;
+  final double containerWidth = 180;
+  final double containerHeight = 150;
+  //final double smallContainer = 68;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          backgroundColor: Colors.yellow,
+          title: const Text("Flutter layout design"),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              SizedBox(
+                height: containerHeight,
+                width: double.infinity,
+                //color: Colors.black,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      height: containerHeight,
+                      width: containerWidth,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(borderRadius),
+                          color: Colors.green),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          height: 68,
+                          width: 175,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(borderRadius),
+                              color: Colors.green),
+                        ),
+                        Container(
+                          height: 68,
+                          width: 175,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(borderRadius),
+                              color: Colors.yellow),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                height: containerHeight / 2,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(borderRadius),
+                  color: Colors.purple,
+                ),
+              ),
+              Container(
+                  height: containerHeight / 2,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(borderRadius),
+                    color: Colors.green,
+                  )),
+              SizedBox(
+                height: containerHeight * 2,
+                width: double.infinity,
+                //color: Colors.green,
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        width: containerWidth,
+                        height: 300,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(borderRadius),
+                          color: Colors.yellow,
+                        ),
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 175,
+                            height: 80,
+                            decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.circular(borderRadius),
+                                color: Colors.blue),
+                          ),
+                          Container(
+                            width: 175,
+                            height: 120,
+                            decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.circular(borderRadius),
+                                color: Colors.orange),
+                          ),
+                          Container(
+                            width: 175,
+                            height: 80,
+                            decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.circular(borderRadius),
+                                color: Colors.blue),
+                          )
+                        ],
+                      )
+                    ]),
+              ),
+              SizedBox(
+                height: containerHeight / 2,
+                width: double.infinity,
+                //color: Colors.pink,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: circleWidthAndHeight,
+                      height: circleWidthAndHeight,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: Colors.purple),
+                    ),
+                    Container(
+                      width: circleWidthAndHeight,
+                      height: circleWidthAndHeight,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: Colors.purple),
+                    ),
+                    Container(
+                      width: circleWidthAndHeight,
+                      height: circleWidthAndHeight,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: Colors.purple),
+                    ),
+                    Container(
+                      width: circleWidthAndHeight,
+                      height: circleWidthAndHeight,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: Colors.purple),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
