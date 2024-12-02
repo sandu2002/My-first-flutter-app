@@ -1,0 +1,186 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+  final double smallContainerWidthAndHeight = 150;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "layout",
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Flutter layout design",
+              style: TextStyle(color: Colors.yellow)),
+          backgroundColor: Colors.pink,
+        ),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Container(
+                  width: double.infinity,
+                  height: 380,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.yellow),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "Flutter is an open source software",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w700),
+                      ),
+                      const SizedBox(height: 10),
+                      const Text(
+                          "You are a curour ideas, or shaping something unique, you approach challenges with determination and a touch of creativity. Your vibrant personality shines through in your work and interactions, making the world a little brighter every day",
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w400)),
+                      const SizedBox(height: 12),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            height: smallContainerWidthAndHeight,
+                            width: smallContainerWidthAndHeight,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.red),
+                          ),
+                          Container(
+                              height: smallContainerWidthAndHeight,
+                              width: smallContainerWidthAndHeight,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: Colors.red))
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 500,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.black),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 20),
+                    child: Column(
+                      children: [
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "Flutter is an open source software",
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.white),
+                            ),
+                            Icon(
+                              Icons.bookmark,
+                              color: Colors.white,
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        const Text(
+                          "You are a curour ideas, or shaping something unique, you approach challenges with determination and a touch of creaYou are a curour ideas, or shaping something unique, you approach challenges with determination and a touch of cre",
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Container(
+                          height: 290,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.purple),
+                          padding: const EdgeInsets.all(20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text(
+                                "Flutter is an open source software",
+                                style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.white),
+                              ),
+                              const SizedBox(height: 10),
+                              const Text(
+                                "Flutter isYou are a curour ideas, or shaping something unique, you approach challenges with determination and a touch of creaYou are a curour ideas, or shaping something unique, you approach challenges with determination and a touch of cre an open source software",
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Container(
+                                    width: 80,
+                                    height: 80,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(100),
+                                        color: Colors.white),
+                                  ),
+                                  Container(
+                                    width: 80,
+                                    height: 80,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(100),
+                                        color: Colors.white),
+                                  ),
+                                  Container(
+                                    width: 80,
+                                    height: 80,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(100),
+                                        color: Colors.white),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
